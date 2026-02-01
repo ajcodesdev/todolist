@@ -1,0 +1,264 @@
+/* FontAwesome */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+  transition: all 0.25s ease;
+}
+
+/* Page background */
+body {
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container */
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+  padding: 35px;
+  width: 90%;
+  max-width: 520px;
+}
+
+h2 {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Brown glow hover for text */
+h2:hover,
+li:hover,
+.not-task:hover,
+button:hover,
+i:hover {
+  text-shadow:
+    0 0 6px rgba(120, 72, 0, 0.6),
+    0 0 12px rgba(120, 72, 0, 0.5);
+}
+
+/* Input section */
+.input-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.8px solid #000;
+  font-size: 15px;
+}
+
+.input-box input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(120, 72, 0, 0.4);
+}
+
+/* Add button */
+.input-box button {
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+/* List */
+ul {
+  list-style: none;
+}
+
+/* Todo item */
+li {
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 1.6rem;
+}
+
+/* Lift on hover */
+li:hover {
+  transform: translateY(-3px);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons inside list */
+li button {
+  background: transparent;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Edit input */
+li input {
+  flex: 1;
+  background: transparent;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 1.5rem;
+}
+
+/* Empty state */
+.not-task {
+  text-align: center;
+  font-style: italic;
+  padding: 25px;
+  font-size: 1rem;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 18px;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  animation: modalFade 0.3s ease;
+}
+
+/* Modal title */
+.modal h3 {
+  font-size: 2rem;
+  font-family: 'Lavishly Yours', cursive;
+  margin-bottom: 10px;
+}
+
+/* Modal text */
+.modal p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Modal button */
+.modal button {
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Brown glow hover */
+.modal button:hover,
+.modal h3:hover,
+.modal p:hover {
+  text-shadow:
+    0 0 6px rgba(120, 72, 0, 0.6),
+    0 0 12px rgba(120, 72, 0, 0.5);
+}
+
+/* Animation */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left panel */
+.left-panel {
+  width: 40%;
+}
+
+/* Right panel */
+.right-panel {
+  width: 60%;
+}
+
+/* Paper design */
+.paper {
+  background: #fffdf7;
+  padding: 30px 35px;
+  border-radius: 6px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Paper lines */
+.paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 2px;
+  height: 100%;
+  background: rgba(180, 120, 70, 0.4);
+}
+
+/* Paper task spacing */
+.paper li {
+  padding-left: 25px;
+  margin-bottom: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+}
